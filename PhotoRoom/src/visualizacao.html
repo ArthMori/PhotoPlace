@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mural de Fotos - Visualização e Postagem</title>
+    <title>PhotoRoom - Visualização e Postagem</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     
@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="app-container">
         <header>
-            <h1><i class="fas fa-camera"></i> Mural de Fotos</h1>
+            <h1><i class="fas fa-camera"></i> PhotoRoom</h1>
             <p>Compartilhe e visualize fotos com localização</p>
         </header>
         
@@ -55,6 +55,18 @@
                 <input type="file" id="foto" accept="image/*" capture="camera">
             </div>
             
+            <div class="form-group">
+                <label for="camera"><i class="fas fa-video"></i> Tirar foto com a câmera:</label>
+                <div class="camera-container">
+                    <video id="camera" autoplay playsinline></video>
+                    <button id="captureButton" class="camera-button"><i class="fas fa-camera"></i> Capturar</button>
+                    <button id="switchCameraButton" class="camera-button secondary" title="Alternar câmera">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            
             <img id="preview" alt="Preview da imagem">
             
             <div class="location-info" id="locationInfo">
@@ -79,6 +91,6 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
