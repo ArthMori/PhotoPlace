@@ -24,6 +24,13 @@ html {
     font-size: var(--font-size-base);
 }
 
+#photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
 body {
     font-family: var(--font-family);
     background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-300) 100%);
